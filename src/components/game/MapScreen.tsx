@@ -72,7 +72,7 @@ export function MapScreen({ save, daily, onPick, onEndless, onCodex, onToggleSou
               type="button"
               disabled={locked}
               onClick={() => onPick(i)}
-              style=undefined
+              style={{ left: `${pos.x}%`, top: `${pos.y}%`, animationDelay: `${i * 80}ms` }}
               className="group absolute flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1 animate-in fade-in zoom-in-50 duration-500 fill-mode-both disabled:cursor-not-allowed"
             >
               <span
@@ -150,7 +150,7 @@ function Stat({ label, value, pct }: { label: string; value: string; pct: number
         <span className="text-[#DBD2C1]">{value}</span>
       </div>
       <div className="mt-1.5 h-1 bg-[#5f6360]/30">
-        <div className="h-full bg-[#C8964A] transition-all duration-700" style=undefined />
+        <div className="h-full bg-[#C8964A] transition-all duration-700" style={{ width: `${Math.min(100, pct * 100)}%` }} />
       </div>
     </div>
   )

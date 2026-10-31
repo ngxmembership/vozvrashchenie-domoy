@@ -56,7 +56,7 @@ export function ResultScreen(p: Props) {
           {[0, 1, 2].map((i) => (
             <Star
               key={i}
-              style=undefined
+              style={{ animationDelay: `${500 + i * 350}ms` }}
               className={`h-12 w-12 animate-in zoom-in-0 spin-in-45 duration-500 fill-mode-both ${
                 i < result.stars ? 'fill-[#C8964A] text-[#C8964A] drop-shadow-[0_0_12px_rgba(200,150,74,0.8)]' : 'text-[#5f6360]'
               }`}
@@ -82,7 +82,7 @@ export function ResultScreen(p: Props) {
           {p.memories.map((m, i) => (
             <li
               key={i}
-              style=undefined
+              style={{ animationDelay: `${800 + i * 200}ms` }}
               className="flex gap-3 text-[#DBD2C1]/90 animate-in fade-in slide-in-from-left-4 duration-500 fill-mode-both"
             >
               <span className="text-[#926223]">ϟ</span>

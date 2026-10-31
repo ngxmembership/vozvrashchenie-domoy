@@ -149,7 +149,7 @@ export function GameCanvas(props: Props) {
         </div>
         <div className="mb-2 flex items-center gap-3">
           <div className="h-1.5 flex-1 overflow-hidden bg-[#5f6360]/40">
-            <div className="h-full bg-[#C8964A] transition-all duration-300" style=undefined />
+            <div className="h-full bg-[#C8964A] transition-all duration-300" style={{ width: `${(hud?.progress ?? 0) * 100}%` }} />
           </div>
           <span className="font-play min-w-28 text-right text-xs text-[#DBD2C1]">{hud?.progressLabel ?? ''}</span>
         </div>
@@ -226,7 +226,7 @@ export function GameCanvas(props: Props) {
               <div className="h-2 w-32 overflow-hidden bg-[#5f6360]/40">
                 <div
                   className={(hud?.charge ?? 0) >= 1 ? 'h-full bg-[#C8964A]' : 'h-full bg-[#DBD2C1]/70'}
-                  style=undefined
+                  style={{ width: `${(hud?.charge ?? 0) * 100}%` }}
                 />
               </div>
             </>
