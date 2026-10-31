@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Play:wght@400;700&display=swap');
+
+.font-forum {
+  font-family: 'Forum', Georgia, serif;
+}
+
+.font-play {
+  font-family: 'Play', Arial, sans-serif;
+}
+
+.asgard-bg {
+  background-color: #080808;
+  background-image:
+    radial-gradient(ellipse at 50% 30%, rgba(146, 98, 35, 0.22), transparent 60%),
+    radial-gradient(ellipse at 50% 100%, rgba(95, 99, 96, 0.18), transparent 60%);
+}
+
+@keyframes asgard-flicker {
+  0%, 100% { opacity: 1; }
+  45% { opacity: 0.85; }
+  50% { opacity: 0.4; }
+  55% { opacity: 0.9; }
+}
+
+.asgard-flicker {
+  animation: asgard-flicker 4s infinite;
+}
